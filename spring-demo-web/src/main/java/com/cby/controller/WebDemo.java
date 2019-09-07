@@ -17,7 +17,6 @@ public class WebDemo {
 
     @RequestMapping(value = "test")
     public String test() throws InterruptedException {
-        //TestUtils.test();
         UserInfo userInfo = new UserInfo();
         String sayHello = testService.sayHello();
         String hello = TestUtils.sayHello();

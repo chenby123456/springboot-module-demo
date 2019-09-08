@@ -2,7 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.cby</groupId>
+    <groupId>com.cby.service</groupId>
     <artifactId>spring-demo-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>spring-demo-service</name>
@@ -20,12 +20,12 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.cby</groupId>
+            <groupId>com.cby.common</groupId>
             <artifactId>spring-demo-common</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
-            <groupId>com.cby</groupId>
+            <groupId>com.cby.dao</groupId>
             <artifactId>spring-demo-dao</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>

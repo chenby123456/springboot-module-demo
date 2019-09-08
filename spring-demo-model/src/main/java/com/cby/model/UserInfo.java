@@ -1,6 +1,8 @@
-package com.cby.user;
+package com.cby.model;
 
 public class UserInfo {
+
+    private Integer id;
     private String userName;
     private String passWord;
     private String mobile;
@@ -36,5 +38,13 @@ public class UserInfo {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 }

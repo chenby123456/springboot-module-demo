@@ -1,11 +1,17 @@
 package com.cby.model;
 
-public class UserInfo {
+import com.cby.annotation.MineAnnotation;
 
+public class UserInfo {
+    @MineAnnotation(value = "用户ID")
     private Integer id;
+    @MineAnnotation(value = "用户姓名")
     private String userName;
+    @MineAnnotation(value = "用户密码")
     private String passWord;
+    @MineAnnotation(value = "用户手机号码")
     private String mobile;
+    @MineAnnotation(value = "用户邮箱地址")
     private String email;
 
     public String getUserName() {

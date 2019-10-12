@@ -18,10 +18,12 @@ public class TestService implements ITestService {
     @Autowired
     private RedisClient redisUtils;
 
+    @Override
     public String sayHello() {
         return "Hello Baby!";
     }
 
+    @Override
     public List<UserInfo> getUserInfo(){
         String name = redisUtils.get("name");
         return userInfoMapper.getUser();

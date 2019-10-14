@@ -1,7 +1,7 @@
 package com.cby.controller;
 
-import com.cby.service.ITestService;
 import com.cby.model.UserInfo;
+import com.cby.service.ITestService;
 import com.cby.utils.ReflectUtils;
 import com.cby.utils.TestUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +17,6 @@ public class WebDemo {
     @Autowired
     private ITestService testService;
 
-
     @RequestMapping(value = "test")
     public String test() throws InterruptedException {
         String sayHello = testService.sayHello();
@@ -29,7 +28,7 @@ public class WebDemo {
     @RequestMapping(value = "testAnnotation")
     public String testAnnotation() throws InterruptedException {
         UserInfo userInfo = new UserInfo();
-        ReflectUtils.test(userInfo.getClass());
+        ReflectUtils.test(UserInfo.class);
         return userInfo.getUserName();
     }
 }

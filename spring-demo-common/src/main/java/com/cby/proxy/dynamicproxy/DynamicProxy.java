@@ -1,5 +1,9 @@
 package com.cby.proxy.dynamicproxy;
 
+import java.lang.reflect.InvocationHandler;
+import java.lang.reflect.Method;
+import java.lang.reflect.Proxy;
+
 /**
  * @ClassName:
  * @Description:
@@ -18,5 +22,27 @@ package com.cby.proxy.dynamicproxy;
  * @Date: 2019/10/14
  * @Version: 1.0.0
  */
-public class DynamicProxyTest {
+public class DynamicProxy implements InvocationHandler {
+
+    private Object obj;
+
+    public DynamicProxy() {
+    }
+
+    public DynamicProxy(Object obj) {
+        this.obj = obj;
+    }
+
+    @Override
+    public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+        System.out.println("交学费！！！");
+        method.invoke(obj,args);
+        return proxy;
+    }
+
+    // 生成代理类
+    public Object CreatProxyedObj()
+    {
+        return Proxy.newProxyInstance(obj.getClass().getClassLoader(), obj.getClass().getInterfaces(), this);
+    }
 }

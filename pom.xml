@@ -15,6 +15,7 @@
         <module>spring-demo-dao</module>
         <module>spring-demo-model</module>
         <module>spring-demo-common</module>
+        <module>spring-demo-rabc</module>
     </modules>
 
     <parent>

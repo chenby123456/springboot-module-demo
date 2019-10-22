@@ -25,6 +25,11 @@
             <artifactId>spring-demo-service</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>com.cby</groupId>
+            <artifactId>spring-demo-rabc</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
     <build>

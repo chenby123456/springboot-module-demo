@@ -29,6 +29,6 @@ public class WebDemo {
     public String testAnnotation() throws InterruptedException {
         UserInfo userInfo = new UserInfo();
         ReflectUtils.test(UserInfo.class);
-        return userInfo.getUserName();
+        return "111";
     }
 }

@@ -26,7 +26,7 @@
     </parent>
     <properties>
         <java.version>1.8</java.version>
-        <hutool.version>4.0.10</hutool.version>
+        <hutool.version>4.1.12</hutool.version>
         <shiro.spring.version>1.4.1</shiro.spring.version>
         <jwt.auth0.version>3.8.3</jwt.auth0.version>
         <shiro-spring.version>1.4.1</shiro-spring.version>

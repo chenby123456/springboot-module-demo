@@ -6,6 +6,8 @@ import com.cby.model.UserInfo;
 import com.cby.service.ITestService;
 import com.cby.utils.ReflectUtils;
 import com.cby.utils.TestUtils;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
+import org.apache.shiro.authz.annotation.RequiresRoles;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -20,12 +22,11 @@ public class WebDemo {
     @Autowired
     private ITestService testService;
 
+    @RequiresPermissions("USER_MANAGE,USER_EDIT")
     @RequestMapping(value = "test")
     public String test() throws InterruptedException {
-        String sayHello = testService.sayHello();
-        String hello = TestUtils.sayHello();
         List<UserInfo> userInfo1 = testService.getUserInfo();
-        return sayHello+"=="+hello;
+        return userInfo1.get(0).getUserName();
     }
 
     @RequestMapping(value = "testAnnotation")

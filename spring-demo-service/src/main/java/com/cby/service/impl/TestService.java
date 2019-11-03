@@ -25,7 +25,7 @@ public class TestService implements ITestService {
 
     @Override
     public List<UserInfo> getUserInfo(){
-        String name = redisUtils.get("name");
+        String name = (String) redisUtils.get("name");
         return userInfoMapper.getUser();
     }
 }

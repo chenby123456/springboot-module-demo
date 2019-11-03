@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cby.dao.mapper.RoleInfoMapper" >
+    <resultMap id="BaseResultMap" type="com.cby.model.RoleInfo" >
+        <id column="ID" property="id" jdbcType="INTEGER" />
+        <result column="ROLE_NAME" property="roleName" jdbcType="VARCHAR" />
+        <result column="ROLE_CODE" property="roleCode" jdbcType="VARCHAR" />
+        <result column="AREAID" property="areaId" jdbcType="VARCHAR" />
+        <result column="ORGANID" property="organId" jdbcType="VARCHAR" />
+    </resultMap>
+    <sql id="Base_Column_List" >
+      ID, ROLE_NAME, ROLE_CODE, AREAID, ORGANID
+    </sql>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+        select
+        <include refid="Base_Column_List" />
+        from role_info
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from user_info
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+    <insert id="insert" parameterType="com.cby.model.UserInfo" >
+    insert into user_info (id, user_Name, pass_Word,
+      mobile, email)
+    values (#{id,jdbcType=INTEGER}, #{userName,jdbcType=VARCHAR}, #{passWord,jdbcType=VARCHAR},
+      #{mobile,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR})
+  </insert>
+    <insert id="insertSelective" parameterType="com.cby.model.UserInfo" >
+        insert into user_info
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                id,
+            </if>
+            <if test="userName != null" >
+                user_Name,
+            </if>
+            <if test="passWord != null" >
+                pass_Word,
+            </if>
+            <if test="mobile != null" >
+                mobile,
+            </if>
+            <if test="email != null" >
+                email,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="userName != null" >
+                #{userName,jdbcType=VARCHAR},
+            </if>
+            <if test="passWord != null" >
+                #{passWord,jdbcType=VARCHAR},
+            </if>
+            <if test="mobile != null" >
+                #{mobile,jdbcType=VARCHAR},
+            </if>
+            <if test="email != null" >
+                #{email,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+
+    <select id="findById" parameterType="java.lang.Long" resultMap="BaseResultMap">
+        select <include refid="Base_Column_List" /> from user_info where id= #{id,jdbcType=INTEGER}
+    </select>
+
+    <select id="finByUserName" parameterType="java.lang.String" resultMap="BaseResultMap">
+        select <include refid="Base_Column_List" /> from user_info where user_name= #{userName,jdbcType=VARCHAR}
+    </select>
+
+    <select id="getUser" resultMap="BaseResultMap">
+        select <include refid="Base_Column_List" /> from user_info
+    </select>
+</mapper>

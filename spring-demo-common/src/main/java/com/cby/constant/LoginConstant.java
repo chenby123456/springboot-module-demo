@@ -8,7 +8,6 @@ import java.util.regex.Pattern;
 /**
  * @ClassName: LoginConstant
  * @Description: 登陆相关常量
- * @Author: xiaoqin.huang-ext@ikang.com
  * @Date: 2019/8/25 15:00
  * @Version: 1.0.0
  */
@@ -48,7 +47,7 @@ public interface LoginConstant {
     /**
      * token 颁发者
      */
-    String ISSUER = "ikang";
+    String ISSUER = "chenby";
 
     /**
      * Token 有效时长
@@ -117,7 +116,6 @@ public interface LoginConstant {
      * @MethodName: tokenUid
      * @Param: [uid]
      * @Return: java.lang.String
-     * @Author: xiaoqin.huang-ext@ikang.com
      * @Date: 2019/8/24 0024 下午 2:55
      */
     static String tokenUid(Integer uid) {
@@ -129,7 +127,6 @@ public interface LoginConstant {
      * @MethodName: tokenExists
      * @Param: [uid]
      * @Return: java.lang.String
-     * @Author: xiaoqin.huang-ext@ikang.com
      * @Date: 2019/8/24 0024 下午 4:55
      */
     static String tokenExists(Integer uid) {

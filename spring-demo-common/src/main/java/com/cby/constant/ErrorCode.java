@@ -1,5 +1,4 @@
 /*
- * Copyright (c) 2016 iKang Guobin Healthcare Group. All rights reserved.
  */
 package com.cby.constant;
 

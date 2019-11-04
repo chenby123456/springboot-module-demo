@@ -6,7 +6,6 @@ import org.apache.shiro.util.ByteSource;
 /**
  * @ClassName: ShiroMd5Util
  * @Description: TODO
- * @Author: xiaoqin.huang-ext@ikang.com
  * @Date: 2019/8/24 0024 上午 11:52
  * @Version: 1.0.0
  */
@@ -16,7 +15,6 @@ public class ShiroMd5Util {
       * @MethodName: md5
       * @Param: [content, salt]
       * @Return: java.lang.String
-      * @Author: xiaoqin.huang-ext@ikang.com
       * @Date: 2019/8/24 0024 上午 11:53
      */
     public static String md5(String content, String salt) {

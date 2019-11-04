@@ -3,7 +3,6 @@ package com.cby.constant;
 /**
  * @ClassName: LogoutTypeEnums
  * @Description: 登出类型
- * @Author: xiaoqin.huang-ext@ikang.com
  * @Date: 2019/8/24 0024 下午 2:08
  * @Version: 1.0.0
  */

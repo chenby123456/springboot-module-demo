@@ -9,7 +9,6 @@ import java.util.StringTokenizer;
 /**
  * @ClassName: IpUtil
  * @Description:
- * @Author: xiaoqin.huang-ext@ikang.com
  * @Date: 2019/8/25 14:56
  * @Version: 1.0.0
  */

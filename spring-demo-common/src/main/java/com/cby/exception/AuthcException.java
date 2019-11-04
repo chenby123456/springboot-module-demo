@@ -6,7 +6,6 @@ import org.apache.shiro.authc.AuthenticationException;
 /**
  * @ClassName: AuthcException
  * @Description:
- * @Author: xiaoqin.huang-ext@ikang.com
  * @Date: 2019/8/25 15:44
  * @Version: 1.0.0
  */

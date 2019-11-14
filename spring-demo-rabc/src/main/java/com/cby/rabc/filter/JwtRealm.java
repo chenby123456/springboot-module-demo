@@ -22,6 +22,7 @@ import org.apache.shiro.subject.PrincipalCollection;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -31,6 +32,7 @@ import java.util.List;
 public class JwtRealm extends AuthorizingRealm {
 
     @Autowired
+    @Lazy  //延迟加载bean，否则会导致该service事务失效  https://segmentfault.com/a/1190000018778645?utm_source=tag-newest
     private IUserInfoService userInfoService;
     @Autowired
     private RedisClient redisClient;

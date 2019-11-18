@@ -1,6 +1,8 @@
 package com.cby.dto;
 
 
+import com.cby.menum.ResultCode;
+
 import java.io.Serializable;
 import java.util.Objects;
 public class ResponseResult<T> implements Serializable {
@@ -9,6 +11,12 @@ public class ResponseResult<T> implements Serializable {
     private int code;
     private String msg;
     private T data;
+
+    public ResponseResult(ResultCode resultCode, T data) {
+        this.code = resultCode.code();
+        this.msg = resultCode.message();
+        this.data = data;
+    }
 
     public static <T> ResponseResult<T> ok() {
         return (new ResponseResult()).setCode(1);
